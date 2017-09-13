@@ -50,7 +50,8 @@ INCS_Debug := \
 	-I/Users/mattway/.node-gyp/8.4.0/src \
 	-I/Users/mattway/.node-gyp/8.4.0/deps/uv/include \
 	-I/Users/mattway/.node-gyp/8.4.0/deps/v8/include \
-	-I$(srcdir)/node_modules/nan
+	-I$(srcdir)/node_modules/nan \
+	-I$(srcdir)/System/Library/Frameworks/ApplicationServices.framework/Headers
 
 DEFS_Release := \
 	'-DNODE_GYP_MODULE_NAME=input-recorder' \
@@ -97,7 +98,8 @@ INCS_Release := \
 	-I/Users/mattway/.node-gyp/8.4.0/src \
 	-I/Users/mattway/.node-gyp/8.4.0/deps/uv/include \
 	-I/Users/mattway/.node-gyp/8.4.0/deps/v8/include \
-	-I$(srcdir)/node_modules/nan
+	-I$(srcdir)/node_modules/nan \
+	-I$(srcdir)/System/Library/Frameworks/ApplicationServices.framework/Headers
 
 OBJS := \
 	$(obj).target/$(TARGET)/addon/input-recorder.o
@@ -156,7 +158,8 @@ LIBTOOLFLAGS_Release := \
 	-Wl,-no_pie \
 	-Wl,-search_paths_first
 
-LIBS :=
+LIBS := \
+	-framework ApplicationServices
 
 $(builddir)/input-recorder.node: GYP_LDFLAGS := $(LDFLAGS_$(BUILDTYPE))
 $(builddir)/input-recorder.node: LIBS := $(LIBS)
