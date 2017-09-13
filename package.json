@@ -1,0 +1,33 @@
+{
+  "name": "input-recorder",
+  "version": "1.0.0",
+  "description": "native background recording of low level mouse and keyboard inputs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "node-gyp rebuild"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matt-way/node-input-recorder.git"
+  },
+  "keywords": [
+    "node",
+    "input",
+    "mouse",
+    "keyboard",
+    "recording",
+    "keylog",
+    "logging"
+  ],
+  "author": "Syntropy",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/matt-way/node-input-recorder/issues"
+  },
+  "homepage": "https://github.com/matt-way/node-input-recorder#readme",
+  "dependencies": {
+    "nan": "^2.7.0",
+    "node-gyp": "^3.6.2"
+  }
+}
