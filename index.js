@@ -1,17 +1,17 @@
-var recorder = require('./build/Debug/input-recorder.node')
+var recorder = require('./build/Release/input-recorder.node')
 
-function cbDone(a, b) {
-  console.log('-- cbDone called!')
-  console.log(a, b)
+// consts for event types
+exports.events = {
+  LEFT_MOUSE_DOWN: 1,
+  RIGHT_MOUSE_DOWN: 3,
+  KEY_DOWN: 10,
+  MODIFIER_CHANGE: 12
 }
 
-function cbDetect(val) {
-  //console.log('-- cbDetect called')
-  //console.log(val)
-  console.log(String.fromCharCode(val))
-  if(val === 12){
-    recorder.stopRecording()
-  }
+exports.startRecording = function(done, detect) {
+  recorder.startRecording(done, detect)
 }
 
-recorder.startRecording(cbDone, cbDetect)
+exports.stopRecording = function() {
+  recorder.stopRecording()
+}

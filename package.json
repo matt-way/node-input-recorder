@@ -1,6 +1,6 @@
 {
   "name": "input-recorder",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "native background recording of low level mouse and keyboard inputs",
   "main": "index.js",
   "scripts": {
